@@ -52,16 +52,13 @@ The new generator is designed to avoid the enlarged square-cell appearance of sc
 
 ## Installation
 
-The download is readable JavaScript, **not an `.afmacros` file**. Install it through Affinity's scripting tools rather than Import Macros.
+Download the .afmacros file and install through Affinity's Script Library window.
 
-1. Download **`MRFilmGrain.js`** from the [v2.0.0 release](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.0).
-2. Open the downloaded file in a plain-text editor and copy its complete contents.
-3. In Affinity, open **Window → Scripting → Script Editor** and paste the complete script into a new editor document.
-4. Save the script to **Scripts Library**, naming it **MR Film Grain 2.0**. It can then be run from the library whenever you need it.
+1. Download **`MR_FilmGrain_2.0.afscripts`** from the [v2.0.0 release](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.0).
+2. Open the Scripts Library window in Affinity and click 'Import Scripts...'.
+3. Select the afscripts file and click 'open'. Done!
 
-You can also run the pasted script directly from Script Editor. No code changes are needed. Affinity's scripting controls may vary between builds; see its [official scripting overview](https://www.affinity.studio/features/scripting).
-
-If you already use [Affinity Script Manager](https://github.com/JiriKrblich/Affinity-script-manager), its **Add Script** / **Save & install** workflow can install the same `.js` file instead. That optional third-party manager is not required.
+If you already use [Affinity Script Manager](https://github.com/JiriKrblich/Affinity-script-manager), its **Add Script** / **Save & install** workflow can install the `.js` source file instead. That optional third-party manager is not required.
 
 ## Usage and editing later
 
