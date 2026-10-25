@@ -52,7 +52,7 @@ The new generator is designed to avoid the enlarged square-cell appearance of sc
 
 ## Installation
 
-Download the .afmacros file and install through Affinity's Script Library window.
+Download the .afscripts file and install through Affinity's Script Library window.
 
 1. Download **`MR_FilmGrain_2.0.afscripts`** from the [v2.0.0 release](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.0).
 2. Open the Scripts Library window in Affinity and click 'Import Scripts...'.
