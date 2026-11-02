@@ -200,6 +200,14 @@ function mrGrainBitmap(node) {
     return node.isShapeNode?node.brushFillDescriptor.fill.bitmap:node.createCompatibleBitmap(true);
 }
 
+function mrGrainConvertBitmap(bitmap,format) {
+    if (bitmap.format.value===format.value)return bitmap;
+    const {Bitmap}=require('/rasterobject.js');
+    const converted=Bitmap.create(bitmap.width,bitmap.height,format);
+    bitmap.copyTo(converted,{x:0,y:0,width:bitmap.width,height:bitmap.height},0,0);
+    return converted;
+}
+
 function mrGrainBitmapFill(bitmap) {
     const {BitmapFill,FillDescriptor,RasterExtendType,RasterResamplerType}=require('/fills.js');
     const {Transform}=require('/geometry.js');
@@ -261,7 +269,7 @@ function mrGrainSettingsCommand(doc, node, options, bitmap, archiveNode, target)
     const spec = mrGrainProjectSpec(doc,target);
     const selection = node.selfSelection;
     const compound = CompoundCommandBuilder.create();
-    if (bitmap) compound.addCommand(node.isShapeNode?DocumentCommand.createSetBrushFill(selection,mrGrainBitmapFill(bitmap)):DocumentCommand.createReplaceBitmap(selection, bitmap));
+    if (bitmap) compound.addCommand(node.isShapeNode?DocumentCommand.createSetBrushFill(selection,mrGrainBitmapFill(bitmap)):DocumentCommand.createReplaceBitmap(selection,mrGrainConvertBitmap(bitmap,doc.format)));
     compound.addCommand(DocumentCommand.createSetBlendMode(selection, BlendMode.LinearLight, false));
     compound.addCommand(DocumentCommand.createSetOpacity(selection, options.amount));
     compound.addCommand(DocumentCommand.createSetBlendRanges(selection, mrGrainRanges(node, options)));
@@ -307,8 +315,8 @@ function mrGrainApply(options,target) {
         const {ShapeRectangle}=require('/shapes.js');
         def=ShapeNodeDefinition.create(ShapeRectangle.create(),{x:0,y:0,width,height},mrGrainBitmapFill(generated.bitmap),null,null,null);
     } else {
-        def=RasterNodeDefinition.create(RasterFormat.RGBA16);
-        def.bitmap=generated.bitmap;
+        def=RasterNodeDefinition.create(doc.format);
+        def.bitmap=mrGrainConvertBitmap(generated.bitmap,doc.format);
     }
     def.transform = Transform.createTranslate(spec.x,spec.y);
     def.userDescription = 'MR Film Grain';
@@ -345,7 +353,7 @@ function mrGrainShowDialog(testCallback) {
     const initialKey = mrGrainStructureKey(width,height,initial);
     const cache = new Map();
     const diagnostics = { generations:0, generationMs:0, previews:0, colorMixes:0 };
-    const initialBitmap=mrGrainBitmap(node);
+    const initialBitmap=mrGrainConvertBitmap(mrGrainBitmap(node),require('/rasterobject.js').RasterFormat.RGBA16);
     cache.set(initialKey,{mono:initial.color===0?initialBitmap:null,rgb:null,lastColor:initial.color,lastBitmap:initialBitmap});
     const dlg = Dialog.create('MR Film Grain');
     dlg.initialWidth = 460;
