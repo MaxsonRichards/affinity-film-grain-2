@@ -69,7 +69,7 @@ Version 2.0 is a complete rewrite of the [original Film Grain macro](https://git
 
 ## Installation
 
-1. Download **`MR_FilmGrain_2.0.afscripts`** from the [v2.0.0 release](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.0).
+1. Download **`MR_FilmGrain_v201.afscripts`** from the [v2.0.1 release](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.1).
 2. Open **Scripts Library** in Affinity and choose **Import Scripts…** from the panel menu.
 3. Select the downloaded file and click **Open**.
 
