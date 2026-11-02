@@ -1,4 +1,4 @@
-/* MR Film Grain v2.0.0 for Affinity 3.3+
+/* MR Film Grain v2.0.1 for Affinity 3.3+
  * Creates or updates its own tagged grain layer. Existing artwork is preserved.
  */
 'use strict';
