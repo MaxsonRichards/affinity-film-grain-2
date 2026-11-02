@@ -10,13 +10,37 @@ This is the next generation of [Affinity Film Grain](https://github.com/MaxsonRi
 
 ## Before and after
 
-Three full-resolution comparisons are included below. Click an image to open its original PNG, then inspect at **100% zoom** to judge the grain. Small README thumbnails can hide fine texture. These examples illustrate the effect; they are not a matched comparison against the old macro.
+Three comparisons, each shown at the full available page width. Before and after images are stacked so you can inspect the grain directly on this page. All images are supplied at 2560 × 1440.
 
-| Example | Before | After |
-| --- | --- | --- |
-| 1 · 2560 × 1440 | [![Example 1 before](images/Image1_Before.png)](images/Image1_Before.png) | [![Example 1 after](images/Image1_After.png)](images/Image1_After.png) |
-| 2 · 1440 × 1920 | [![Example 2 before](images/Image2_Before.png)](images/Image2_Before.png) | [![Example 2 after](images/Image2_After.png)](images/Image2_After.png) |
-| 3 · 2560 × 1440 | [![Example 3 before](images/Image3_Before.png)](images/Image3_Before.png) | [![Example 3 after](images/Image3_After.png)](images/Image3_After.png) |
+### Gradient
+
+**Before**
+
+<img src="images/Gradient_Before.jpg" alt="Gradient before film grain" width="2560">
+
+**After — MR Film Grain 2.0**
+
+<img src="images/Gradient_After.jpg" alt="Gradient with MR Film Grain 2.0" width="2560">
+
+### Diffusion
+
+**Before**
+
+<img src="images/Diffusion_Before.jpg" alt="Diffusion gradient before film grain" width="2560">
+
+**After — MR Film Grain 2.0**
+
+<img src="images/Diffusion_After.jpg" alt="Diffusion gradient with MR Film Grain 2.0" width="2560">
+
+### Mesh
+
+**Before**
+
+<img src="images/Mesh_Before.jpg" alt="Mesh gradient before film grain" width="2560">
+
+**After — MR Film Grain 2.0**
+
+<img src="images/Mesh_After.jpg" alt="Mesh gradient with MR Film Grain 2.0" width="2560">
 
 ## What's new compared with the macro?
 
