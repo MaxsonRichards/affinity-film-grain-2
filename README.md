@@ -8,7 +8,7 @@ Add natural-looking grain to photos, gradients and designs, with controls for si
 
 Version 2.0 is a complete rewrite of the [original Film Grain macro](https://github.com/MaxsonRichards/affinity-film-grain), using a new grain generator.
 
-**[Download v2.0.0](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.0)** · [JavaScript source](MRFilmGrain.js) · [MIT license](LICENSE)
+**[Download v2.0.1](https://github.com/MaxsonRichards/affinity-film-grain-2/releases/tag/v2.0.1)** · [JavaScript source](MRFilmGrain.js) · [MIT license](LICENSE) 
 
 ## Before and after
 
