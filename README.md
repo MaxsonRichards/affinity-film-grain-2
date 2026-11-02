@@ -12,7 +12,7 @@ Version 2.0 is a complete rewrite of the [original Film Grain macro](https://git
 
 ## Before and after
 
-### Gradient
+### Image 1
 
 **Before**
 
@@ -22,7 +22,7 @@ Version 2.0 is a complete rewrite of the [original Film Grain macro](https://git
 
 <img src="images/Gradient_After.jpg" alt="Gradient with MR Film Grain 2.0" width="2560">
 
-### Diffusion
+### Image 2
 
 **Before**
 
@@ -32,7 +32,7 @@ Version 2.0 is a complete rewrite of the [original Film Grain macro](https://git
 
 <img src="images/Diffusion_After.jpg" alt="Diffusion gradient with MR Film Grain 2.0" width="2560">
 
-### Mesh
+### Image 3
 
 **Before**
 
